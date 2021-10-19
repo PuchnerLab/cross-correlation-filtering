@@ -26,7 +26,7 @@ fovArea = 40.96^2;  % um^2
 % Run the pipeline to generate the pair- and cross-correlation plots. These
 % plots will be used to determine cutoffs for molecule/cluster separation
 % (cross-correlation) and for optional clustering (pair-correlation).
-graphic_pipeline(...
+cc_graphic_pipeline(...
     coords1, coords2, maxDistance, fovArea, 'um');
 
 % Distances used for optional clustering. Should be [0.0, 0.0] for no
@@ -40,7 +40,7 @@ minimumNumbers = [2, 2];
 separation_distance = 0.15;  % um
 
 % Run the pipeline to generate the separated coordinate lists and indices.
-[coords_coloc, included, excluded, cluster_filters, coord_idx] = separation_pipeline(...
+[coords_coloc, included, excluded, cluster_filters, coord_idx] = cc_separation_pipeline(...
     coords1, coords2, countclusters_distances, separation_distance, minimumNumbers);
 
 % Example of how to use the indices to obtain the split the coordinate
