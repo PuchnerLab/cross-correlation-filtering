@@ -1,4 +1,4 @@
-function graphic_pipeline(coords1, coords2, maxDistance, fovArea, units)
+function cc_graphic_pipeline(coords1, coords2, maxDistance, fovArea, units)
     % % Calculate pair correlation to determine cluster assignment distance.
     [~, ~, radii1, Ncounts1] = paircorr(coords1, fovArea, maxDistance);
     [~, ~, radii2, Ncounts2] = paircorr(coords2, fovArea, maxDistance);

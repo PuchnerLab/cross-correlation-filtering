@@ -1,4 +1,4 @@
-function  [coords_coloc, included, excluded, cluster_filters, coord_idx] = separation_pipeline(coords1, coords2, countclusters_distances, separation_distance, minimumNumbers)
+function  [coords_coloc, included, excluded, cluster_filters, coord_idx] = cc_separation_pipeline(coords1, coords2, countclusters_distances, separation_distance, minimumNumbers)
     % % Assign clusters
     coords1_mlist = add_blinking_fields(coords1);
     coords1_mlist = countclusters(coords1_mlist, countclusters_distances(1), 0);
